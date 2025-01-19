@@ -2,34 +2,30 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import { routeGenerator } from "../utils/routesGenerator";
+import { adminPaths } from "./admin.routes";
+import { facultyPaths } from "./faculty.router";
+import { studentPaths } from "./student.route";
 
-import { ReactNode } from "react";
-import { adminRoutes } from "./admin.routes";
-
-export type TChildren = {
-  path: string;
-  element: ReactNode;
-  children: TChildren[];
-};
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
   {
-    path: "faculty",
+    path: "/faculty",
     element: <App />,
-    children: adminRoutes,
+    children: routeGenerator(facultyPaths),
   },
   {
-    path: "admin",
+    path: "/admin",
     element: <App />,
-    children: adminRoutes,
+    children: routeGenerator(adminPaths),
   },
   {
-    path: "student",
+    path: "/student",
     element: <App />,
-    children: adminRoutes,
+    children: routeGenerator(studentPaths),
   },
 
   {
