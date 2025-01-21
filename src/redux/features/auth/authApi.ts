@@ -12,4 +12,4 @@ import { baseApi } from "../../api/baseApi";
        })
 
 })
-export const {useLoginMutation,}=authApi,
+export const {useLoginMutation,}=authApi;
