@@ -1,8 +1,8 @@
 import { Layout, Menu } from "antd";
 import { sidebarItemGenerator } from "../../utils/sidebarItemGenerator";
 import { adminPaths } from "../../routes/admin.routes";
-import { facultyPaths } from "../../routes/faculty.router";
-import { studentPaths } from "../../routes/student.route";
+import { facultyPaths } from "../../routes/faculty.routes";
+import { studentPaths } from "../../routes/student.routes";
 
 const { Sider } = Layout;
 const userRole = {
